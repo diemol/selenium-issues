@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,13 +21,14 @@ public class Download {
     @Test
     public void download() throws Exception {
         File folder = new File("/tmp/downloads");
+        URL url = new URL("http://localhost:4444/wd/hub");
 
         ChromeOptions chromeOptions = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", folder.getAbsolutePath());
         prefs.put("profile.default_content_settings.popups", 0);
         chromeOptions.setExperimentalOption("prefs", prefs);
-        WebDriver driver = new RemoteWebDriver(chromeOptions);
+        WebDriver driver = new RemoteWebDriver(url, chromeOptions);
 
         driver.get("http://the-internet.herokuapp.com/download");
         driver.findElement(By.cssSelector(".example a")).click();
