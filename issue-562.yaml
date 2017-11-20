@@ -1,0 +1,34 @@
+  version: '2'
+  services:
+    firefox:
+      image: selenium/node-firefox-debug:local
+      depends_on:
+        - hub
+      shm_size: 2G
+      environment:
+        JAVA_OPTS: -Xmx512m
+        HUB_PORT_4444_TCP_ADDR: hub
+        HUB_PORT_4444_TCP_PORT: 4444
+        no_proxy: localhost
+        GRID_BROWSER_TIMEOUT: 300000
+        GRID_TIMEOUT: 300000
+        SE_OPTS: -host firefox -port 5001
+        #SCREEN_WIDTH: 1320
+        #SCREEN_HEIGHT: 1020
+      ports:
+        - "13101:5900"
+        - "5001:5001"
+      links:
+        - hub
+
+    hub:
+      image: selenium/hub:local
+      ports:
+        - "4444:4444"
+      environment:
+        PORT: 4444
+        GRID_BROWSER_TIMEOUT: 300000
+        GRID_TIMEOUT: 300000
+        GRID_CLEAN_UP_CYCLE: 300000
+        GRID_UNREGISTER_IF_STILL_DOWN_AFTER: 300000
+        SE_OPTS: -browserTimeout 86400 -timeout 100
