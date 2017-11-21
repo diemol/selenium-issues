@@ -15,6 +15,7 @@ public class RunWithProxyTest {
     public void runWithProxy() throws Exception {
         URL url = new URL("http://standalone-firefox-debug:4444/wd/hub");
 
+        // Proxy taken from https://free-proxy-list.net/
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("httpProxy", "54.36.182.96:3128");
         jsonObject.addProperty("sslProxy", "54.36.182.96:3128");
