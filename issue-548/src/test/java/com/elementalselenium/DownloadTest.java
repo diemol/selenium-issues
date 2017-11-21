@@ -25,6 +25,8 @@ public class DownloadTest {
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", folder.getAbsolutePath());
         prefs.put("profile.default_content_settings.popups", 0);
+        prefs.put("download.prompt_for_download", "false");
+        prefs.put("download.directory_upgrade", "true");
         chromeOptions.setExperimentalOption("prefs", prefs);
         WebDriver driver = new RemoteWebDriver(url, chromeOptions);
 
