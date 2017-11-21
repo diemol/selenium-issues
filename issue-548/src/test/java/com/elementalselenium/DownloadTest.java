@@ -1,27 +1,25 @@
 package com.elementalselenium;
 
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
+public class DownloadTest {
 
-public class Download {
-
-    @SuppressWarnings("ConstantConditions")
+    @SuppressWarnings({"ConstantConditions", "ResultOfMethodCallIgnored"})
     @Test
     public void download() throws Exception {
+        // This is the path inside the container
         File folder = new File("/tmp/downloads");
-        URL url = new URL("http://localhost:4444/wd/hub");
+        URL url = new URL("http://standalone-chrome-debug:4444/wd/hub");
 
         ChromeOptions chromeOptions = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
@@ -39,10 +37,10 @@ public class Download {
         System.out.println(folder.getAbsolutePath());
         File[] listOfFiles = folder.listFiles();
         // Make sure the directory is not empty
-        assertThat(listOfFiles.length, is(not(0)));
+        Assert.assertNotEquals(listOfFiles.length, 0);
         for (File file : listOfFiles) {
             // Make sure the downloaded file(s) is(are) not empty
-            assertThat(file.length(), is(not((long) 0)));
+            Assert.assertNotEquals(file.length(), 0);
         }
 
         driver.quit();

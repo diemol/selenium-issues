@@ -1,0 +1,21 @@
+version: "2"
+services:
+  standalone-chrome-debug:
+    container_name: "standalone-chrome-debug"
+    image: "selenium/standalone-chrome-debug:latest"
+    ports:
+      - "4444:4444"
+      - "5900:5900"
+    volumes:
+      - ./downloads:/tmp/downloads
+
+  selenium-test-alpine-java:
+    container_name: "issue-548"
+    image: "issue-548:latest"
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    depends_on:
+      - standalone-chrome-debug
+    volumes:
+      - ./downloads:/tmp/downloads
