@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.elementalselenium</groupId>
-    <artifactId>tips</artifactId>
+    <artifactId>issue-478</artifactId>
     <version>1.0.0</version>
     <build>
         <plugins>
