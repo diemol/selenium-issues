@@ -18,3 +18,5 @@ services:
       dockerfile: ./Dockerfile
     depends_on:
       - standalone-chrome-debug
+    volumes:
+      - ./images:/tmp/images

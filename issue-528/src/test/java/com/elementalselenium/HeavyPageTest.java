@@ -1,11 +1,16 @@
 package com.elementalselenium;
 
-import org.openqa.selenium.WebDriver;
+import com.google.common.io.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.net.URL;
 
 public class HeavyPageTest {
@@ -21,6 +26,13 @@ public class HeavyPageTest {
         driver.findElement(By.xpath("//*[@id='waypoints']/div[2]/span")).click();
 
         Thread.sleep(1000);
+
+        WebDriver augmentedDriver = new Augmenter().augment(driver);
+        File screenshot = ((TakesScreenshot)augmentedDriver)
+                .getScreenshotAs(OutputType.FILE);
+
+        File savedScreenshot = new File("/tmp/images/screenshot.png");
+        Files.copy(screenshot, savedScreenshot);
 
         driver.quit();
     }
