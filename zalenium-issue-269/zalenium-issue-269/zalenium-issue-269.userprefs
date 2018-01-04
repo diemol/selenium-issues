@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{0D23EFC4-CFC7-461E-9A58-B075332F8020}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="zalenium-issue-269/FirefoxTest.cs">
     <Files>
-      <File FileName="zalenium-issue-269/FirefoxTest.cs" Line="5" Column="1" />
+      <File FileName="zalenium-issue-269/FirefoxTest.cs" Line="25" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
