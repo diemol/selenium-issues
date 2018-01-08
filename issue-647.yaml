@@ -1,0 +1,30 @@
+# To execute this docker-compose yml file use docker-compose -f <file_name> up
+# Add the "-d" flag at the end for deattached execution
+version: '2'
+services:
+  firefox:
+    image: selenium/node-firefox:3.8.1-dubnium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+
+  chrome:
+    image: selenium/node-chrome:3.8.1-dubnium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - no_proxy=localhost
+      - TZ=Europe/London
+
+  hub:
+    image: selenium/hub:3.8.1-dubnium
+    ports:
+      - "4444:4444"
+    environment:
+      - SE_OPTS=-enablePassThrough false
