@@ -1,0 +1,6 @@
+{
+  "require-dev": {
+    "facebook/webdriver": "~1.5.0",
+    "phpunit/phpunit": "6.5.*"
+  }
+}

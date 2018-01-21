@@ -1,0 +1,39 @@
+# How to run this? -> docker-compose -f docker-compose.yml up --abort-on-container-exit --build
+version: '2'
+services:
+  firefox:
+    image: selenium/node-firefox:3.8.1-erbium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  chrome:
+    image: selenium/node-chrome:3.8.1-erbium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  hub:
+    image: selenium/hub:3.8.1-erbium
+    ports:
+      - "4444:4444"
+
+  php-webdriver:
+    depends_on:
+      - chrome
+      - firefox
+      - hub
+    image: php-webdriver
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    depends_on:
+      - hub
+    volumes:
+      - .:/wd/src
