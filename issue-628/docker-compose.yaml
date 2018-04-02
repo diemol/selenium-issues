@@ -2,12 +2,12 @@
 version: "2"
 services:
   selenium-hub:
-    image: selenium/hub:3.8.1-aluminum
+    image: selenium/hub:3.11.0-bismuth
     ports:
       - "4444:4444"
 
   chrome:
-    image: selenium/node-chrome:3.8.1-aluminum
+    image: selenium/node-chrome:3.11.0-bismuth
     links:
       - selenium-hub:hub
     volumes:

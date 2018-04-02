@@ -26,8 +26,7 @@ public class DownloadTest {
         prefs.put("download.prompt_for_download", "false");
         chromeOptions.setExperimentalOption("prefs", prefs);
 
-        DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
-        desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities(chromeOptions);
         WebDriver driver = new RemoteWebDriver(url, desiredCapabilities);
 
         driver.get("http://the-internet.herokuapp.com/download");
