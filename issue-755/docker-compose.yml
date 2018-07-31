@@ -1,0 +1,22 @@
+version: '2'
+services:
+  chrome:
+    image: selenium/node-chrome:3.13.0
+    links:
+      - selenium-hub:hub
+    ports:
+      - 5900:5900
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      HUB_HOST: hub
+      HUB_PORT: 4444
+      SE_OPTS: -timeout 65 -browserTimeout 60 -browser browserName=chrome,maxInstances=1,platform=LINUX,applicationName=chrome-1
+      REMOTE_HOST: http://chrome:5555      
+
+  selenium-hub:
+    image: selenium/hub:3.13.0
+    ports:
+      - "4444:4444"
