@@ -1,7 +1,7 @@
 version: '2'
 services:
   chrome:
-    image: selenium/node-chrome:3.13.0
+    image: selenium/node-chrome:3.14.0
     ports:
       - 5900:5900
     volumes:
@@ -15,6 +15,6 @@ services:
       NODE_MAX_SESSION: 5
 
   selenium-hub:
-    image: selenium/hub:3.13.0
+    image: selenium/hub:3.14.0
     ports:
       - "4444:4444"
