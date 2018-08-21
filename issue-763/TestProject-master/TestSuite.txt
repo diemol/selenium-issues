@@ -1,0 +1,13 @@
+*** Settings ***
+Library           ZAPublicLibrary
+Library           SeleniumLibrary
+Resource          resource.txt
+
+*** Test Cases ***
+TestCase
+    Open Browser    https://www.baidu.com/    chrome    None    http://localhost:4444/wd/hub
+    Maximize Browser Window
+    Sleep    2s
+    Log    HELLO
+
+

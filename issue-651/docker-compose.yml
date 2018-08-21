@@ -1,4 +1,4 @@
-# How to run this? -> docker-compose -f docker-compose-without-proxy-config.yml up --abort-on-container-exit --build
+# How to run this? -> docker-compose -f docker-compose.yml up --abort-on-container-exit --build
 version: '2'
 services:
   firefox:

@@ -1,0 +1,7 @@
+*** Settings ***
+Library           ZAPublicLibrary
+Library           SeleniumLibrary
+
+*** Variables ***
+
+*** Keywords ***
