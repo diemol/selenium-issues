@@ -1,0 +1,22 @@
+# To execute this docker-compose yml file use `docker-compose -f <file_name> up`
+# Add the `-d` flag at the end for detached execution
+version: '2'
+services:
+  chrome:
+    image: selenium/node-chrome-debug:3.14.0-arsenic
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "5900:5900"
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+      HTTP_PROXY: "http://167.114.56.169:80"
+      HTTPS_PROXY: "https://167.114.56.169:80"
+      NO_PROXY: "localhost,127.0.0.1,localaddress,.localdomain.com"
+
+  hub:
+    image: selenium/hub:3.14.0-arsenic
+    ports:
+      - "4444:4444"
