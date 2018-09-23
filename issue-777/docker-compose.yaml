@@ -1,0 +1,20 @@
+# To execute this docker-compose yml file use `docker-compose -f <file_name> up`
+# Add the `-d` flag at the end for detached execution
+version: '2'
+services:
+  firefox:
+    image: selenium/node-firefox-debug:latest
+    volumes:
+      - /dev/shm:/dev/shm
+      - /tmp/firefox:/tmp/firefox_profiles
+    ports:
+      - "5900:5900"
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  hub:
+    image: selenium/hub:latest
+    ports:
+      - "4444:4444"
