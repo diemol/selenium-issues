@@ -1,0 +1,17 @@
+version: "2"
+services:
+  standalone-firefox-debug:
+    container_name: "standalone-firefox-debug"
+    image: "selenium/standalone-firefox-debug:3.7.1-beryllium"
+    ports:
+      - "4444:4444"
+      - "5900:5900"
+
+  selenium-test-alpine-java:
+    container_name: "issue-478"
+    image: "issue-478:latest"
+    build:
+      context: ""
+      dockerfile: Dockerfile
+    depends_on:
+      - standalone-firefox-debug
