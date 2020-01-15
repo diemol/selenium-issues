@@ -41,7 +41,7 @@ closeQuestionsAndSupportRequestsComment: >
   Thank you for your contributions.
 
 # Issue types that the repo supports. When an issue is created, the heading should be one of these strings
-# (from the issue templates). Don't forget: markdown characters are also taken into account (e.g. ## for <h2> html)
+# (from the issue templates). To take into account markdown characters, put the whole string in quotations.
 issueTypes:
   - "## 🐛 Bug Report"
   - "## 🚀 Feature Proposal"
