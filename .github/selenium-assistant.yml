@@ -14,7 +14,41 @@ openIssueGreetingComment: >
 # Is the assistant actively closing any new open issues requesting support or asking questions?
 closeQuestionsAndSupportRequests: true
 
+# Strings used by the bot to identify that the issue is a request for support or a question?
+# If left empty or `false` the bot won't close any support requests or questions
+questionsAndSupportRequestsStrings:
+  - 💬
+  - questions and help
+
+# Comment users get when a support request or question is created as an issue.
 closeQuestionsAndSupportRequestsComment: >
+  💬 It looks like this is a request for support or a question
+
+
+  💡 A better way to address this is:
+
+
+  * 📫 Send questions and support requests to the [Selenium user group](https://groups.google.com/forum/#!forum/selenium-users)
+
+  * 📮 Post them to [StackOverflow](https://stackoverflow.com/questions/tagged/selenium)
+
+  * 🗣 Join us in the [IRC/Slack channel](https://seleniumhq.herokuapp.com/) where the community can help you as well
+
+
+  If you think this is incorrect, please feel free to open a new issue.
+
+
+  Thank you for your contributions.
+
+# Issue types that the repo supports. When an issue is created, the heading should be one of these strings (from the issue templates).
+issueTypes:
+  - 🐛 Bug report
+  - 🚀 Feature Proposal
+  - 💥 Regression Report
+
+closeNotSupportedIssueTypes: true
+
+closeNotSupportedIssueTypesComment: >
   💬 It looks like this is a request for support or a question
 
 
