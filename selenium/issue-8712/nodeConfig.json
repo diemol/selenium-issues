@@ -22,6 +22,3 @@
   "withoutServlets": [],
   "custom": {}
 }
-
-
-java -jar -Dwebdriver.edge.driver=/usr/local/bin/msedgedriver selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfig.json
