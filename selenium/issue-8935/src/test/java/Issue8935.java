@@ -10,7 +10,10 @@ public class Issue8935 {
     try {
       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
       driver.get("https://signin.ebay.com/");
-      driver.findElement(By.xpath(".//*[@id='gh-p-1']/a")).click();
+//      driver.findElement(By.xpath(".//*[@id='gh-p-1']/a")).click();
+      driver.findElement(By.xpath("//*[@id='create-account-link']")).click();
+    } catch (Exception e) {
+      e.printStackTrace();
     } finally {
       driver.quit();
     }
