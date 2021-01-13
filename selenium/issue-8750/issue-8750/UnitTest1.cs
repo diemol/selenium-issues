@@ -1,43 +1,24 @@
-using System.Threading;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools;
-using OpenQA.Selenium.DevTools.Network;
+using System;
+using System.Threading.Tasks;
+using OpenQA.Selenium.Firefox;
 
-namespace issue_8750
+namespace issue_8961
 {
-    public class Tests
+    class Program
     {
-        private IWebDriver driver;
-
-        [SetUp]
-        public void Setup()
+        static void Main(string[] args)
         {
-            driver = new ChromeDriver();
-        }
-
-        [Test]
-        public void Test1()
-        {
-            IDevTools devTools = driver as IDevTools;
-            DevToolsSession session = devTools.CreateDevToolsSession();
-            SetBlockedURLsCommandSettings blockedUrlSettings = new SetBlockedURLsCommandSettings();
-            blockedUrlSettings.Urls = new string[]
+            for (int i = 1; i <= 1; i++)
             {
-                "http://automationpractice.com/img/p/1/6/16-large_default.jpg",
-                "http://automationpractice.com/modules/blockbanner/img/sale70.png",
-            };
-            session.Network.Enable(new EnableCommandSettings());
-            session.Network.SetBlockedURLs(blockedUrlSettings);
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("http://automationpractice.com/");
-            Thread.Sleep(10000);
+                Task.Run(() => DriverStuff());
+            }
+            Console.ReadLine();
         }
 
-        [TearDown]
-        public void TearDown()
+        public static void DriverStuff()
         {
+            FirefoxDriver driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("https://www.bing.com");
             driver.Quit();
         }
     }
