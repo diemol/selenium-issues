@@ -19,11 +19,11 @@ public class Issue9083 {
           break;
         }
         // Sleep added only to show that the popup loaded
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//INPUT[@class=\"zhuceBtn\"]")).click();
         System.out.println("Clicked element successfully!");
         // Sleep added only to show that button was clicked
-        Thread.sleep(3000);
+        Thread.sleep(5000);
       }
     } catch (Exception e) {
       System.out.println(e.getMessage());
