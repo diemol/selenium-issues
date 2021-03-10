@@ -3,19 +3,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.Set;
 
 public class Issue9040 {
 
-  public static void main(String[] args) {
-//    System.setProperty("webdriver.chrome.driver", "D:/chrome/chromedriver.exe");
-    WebDriver driver = new ChromeDriver();
-    try {
-      driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_onload");
+  public static void main(String[] args) throws InterruptedException {
+    WebDriver driver = new FirefoxDriver();
+//    WebDriver driver = new ChromeDriver();
 
-      Alert pageIsOpen = driver.switchTo().alert();
-      pageIsOpen.accept();
+    try {
+      String path = Issue9040.class.getClassLoader().getResource("trail.html").getPath();
+      driver.get("file://" + path);
 
       WebElement visit = driver.findElement(By.xpath("//a[@id='newLink']"));
       Set<String> originalWindowHandles = driver.getWindowHandles();
@@ -32,6 +32,10 @@ public class Issue9040 {
           break;
         }
       }
+
+      System.out.println("Sleeping 5 secs to show the issue clearly");
+      Thread.sleep(5000);
+      System.out.println("Woke up!");
 
       Alert alert = driver.switchTo().alert();
       alert.accept();
