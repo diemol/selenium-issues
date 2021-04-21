@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "webdriverio": "^7.5.1"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "type": "module"
+}
