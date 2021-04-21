@@ -5,13 +5,26 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>issue-9203</artifactId>
+  <artifactId>issue-9314</artifactId>
   <version>1.0-SNAPSHOT</version>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
   <dependencies>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-chrome-driver</artifactId>
+      <artifactId>selenium-java</artifactId>
       <version>4.0.0-beta-2</version>
     </dependency>
   </dependencies>
