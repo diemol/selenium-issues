@@ -12,9 +12,7 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
-    #   Below volume command resolves the tab crash issue in linux system
-    volumes:
-      - /dev/shm:/dev/shm
+    shm_size: '2gb'
 
 
   firefox:
@@ -23,7 +21,7 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
-
+    shm_size: '2gb'
 
   bdd:
     image: icemeetscoke/uiautomation
@@ -32,5 +30,5 @@ services:
       - firefox
     environment:
       - HUB_HOST=hub
-#    volumes:
-#      -  C:\Users\ryanchen\WorkSpaces\LogixPanel\test-result:/usr/share/automation/target/html
+    volumes:
+      -  C:\Users\diemol\Downloads\test-result:/usr/share/automation/target/html
