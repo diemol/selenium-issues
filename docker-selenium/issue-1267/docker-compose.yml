@@ -1,0 +1,36 @@
+version: "3"
+services:
+  hub:
+    image: selenium/hub:3.141.59-20210422
+    ports:
+      - "4444:4444"
+
+
+  chrome:
+    image: selenium/node-chrome:3.141.59-20210422
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+    #   Below volume command resolves the tab crash issue in linux system
+    volumes:
+      - /dev/shm:/dev/shm
+
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-20210422
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+
+
+  bdd:
+    image: icemeetscoke/uiautomation
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - HUB_HOST=hub
+#    volumes:
+#      -  C:\Users\ryanchen\WorkSpaces\LogixPanel\test-result:/usr/share/automation/target/html
