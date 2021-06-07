@@ -6,3 +6,4 @@ zalenium-issue-269/zalenium-issue-269/zalenium-issue-269/obj/x86/Debug
 */*/node_modules
 */node_modules
 *.log
+.vscode

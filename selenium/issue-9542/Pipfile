@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+selenium = "==3.141.0"
+pytest = "==6.2.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+run_test = "python3 -m pytest -o log_cli=true -o log_cli_level=INFO test.py"
