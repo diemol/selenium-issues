@@ -20,7 +20,7 @@ try:
         driver.current_window_handle
         driver.current_url
         driver.title
-        # driver.manage().timeouts().getScriptTimeout();
+        driver.window_handles
     driver.quit()
 except Exception as e:
     print(e)
