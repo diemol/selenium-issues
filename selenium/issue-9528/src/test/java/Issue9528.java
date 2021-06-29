@@ -10,11 +10,11 @@ import java.net.URL;
 public class Issue9528 {
 
   public static void main(String[] args) throws MalformedURLException {
-    exampleOne();
+    exampleTwo();
   }
 
   private static void exampleOne() throws MalformedURLException {
-    WebDriver remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4443"), new FirefoxOptions());
+    WebDriver remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4444"), new FirefoxOptions());
     try {
       Dimension defaultWindowSize = remoteWebDriver.manage().window().getSize();
       for (int i = 0; i < 2000; i++)
@@ -54,7 +54,7 @@ public class Issue9528 {
   }
 
   private static void exampleTwo() throws MalformedURLException {
-    WebDriver remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4443"), new FirefoxOptions());
+    WebDriver remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4444"), new FirefoxOptions());
     try {
       for (int i = 0; i < 2000; i++) {
         System.out.println(i+1);
