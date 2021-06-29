@@ -1,13 +1,20 @@
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Issue9528 {
 
-  public static void main(String[] args) {
-    WebDriver remoteWebDriver = new RemoteWebDriver(new ChromeOptions());
+  public static void main(String[] args) throws MalformedURLException {
+    exampleOne();
+  }
+
+  private static void exampleOne() throws MalformedURLException {
+    WebDriver remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4443"), new FirefoxOptions());
     try {
       Dimension defaultWindowSize = remoteWebDriver.manage().window().getSize();
       for (int i = 0; i < 2000; i++)
@@ -40,6 +47,22 @@ public class Issue9528 {
         remoteWebDriver.navigate().to("about:blank");
 
         remoteWebDriver.manage().window().setSize(defaultWindowSize);
+      }
+    } finally {
+      remoteWebDriver.quit();
+    }
+  }
+
+  private static void exampleTwo() throws MalformedURLException {
+    WebDriver remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4443"), new FirefoxOptions());
+    try {
+      for (int i = 0; i < 2000; i++) {
+        System.out.println(i+1);
+        remoteWebDriver.get("http://www.google.com");
+        remoteWebDriver.getWindowHandle();
+        remoteWebDriver.getCurrentUrl();
+        remoteWebDriver.getTitle();
+        remoteWebDriver.manage().timeouts().getScriptTimeout();
       }
     } finally {
       remoteWebDriver.quit();
