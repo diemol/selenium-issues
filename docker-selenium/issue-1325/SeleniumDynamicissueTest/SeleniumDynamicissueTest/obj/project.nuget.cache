@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "nv/4sYo0S8lLNnihnegkeVROAfoSRhmRz1zF2uo637Cx8GnHlejcXh64RQWGlJ6K5LR0joSg1dQIuQUUG4Xxxw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diemol\\projects\\diemol\\selenium-issues\\docker-selenium\\issue-1325\\SeleniumDynamicissueTest\\SeleniumDynamicissueTest\\SeleniumDynamicissueTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diemol\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\diemol\\.nuget\\packages\\selenium.support\\4.0.0-beta4\\selenium.support.4.0.0-beta4.nupkg.sha512",
+    "C:\\Users\\diemol\\.nuget\\packages\\selenium.webdriver\\4.0.0-beta4\\selenium.webdriver.4.0.0-beta4.nupkg.sha512"
+  ],
+  "logs": []
+}

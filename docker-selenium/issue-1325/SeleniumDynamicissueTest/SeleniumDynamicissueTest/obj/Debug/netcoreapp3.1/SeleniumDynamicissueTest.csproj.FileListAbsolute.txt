@@ -1,0 +1,17 @@
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\SeleniumDynamicissueTest.exe
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\SeleniumDynamicissueTest.deps.json
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\SeleniumDynamicissueTest.runtimeconfig.json
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\SeleniumDynamicissueTest.runtimeconfig.dev.json
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\SeleniumDynamicissueTest.dll
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\SeleniumDynamicissueTest.pdb
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.csproj.AssemblyReference.cache
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.AssemblyInfoInputs.cache
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.AssemblyInfo.cs
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.csproj.CoreCompileInputs.cache
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.csproj.CopyComplete
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.dll
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.pdb
+C:\Users\diemol\projects\diemol\selenium-issues\docker-selenium\issue-1325\SeleniumDynamicissueTest\SeleniumDynamicissueTest\obj\Debug\netcoreapp3.1\SeleniumDynamicissueTest.genruntimeconfig.cache
