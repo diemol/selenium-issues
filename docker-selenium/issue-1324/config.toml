@@ -1,0 +1,6 @@
+[docker]
+configs = [
+    "selenium/standalone-chrome:4.0.0-rc-1-prerelease-20210804", "{\"browserName\": \"chrome\"}"
+]
+url = "http://host.docker.internal:2375"
+video-image = "selenium/video:ffmpeg-4.3.1-20210804"

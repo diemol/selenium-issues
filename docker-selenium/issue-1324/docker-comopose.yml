@@ -1,0 +1,17 @@
+version: '2.4'
+services:
+  selenium-docker:
+    image: selenium/standalone-docker:4.0.0-rc-1-prerelease-20210804
+    hostname: selenium-docker
+    container_name: selenium-docker
+    ports:
+      - 4444:4444
+    volumes:
+      - ./config.toml:/opt/bin/config.toml
+      - ./assets:/opt/selenium/assets
+    networks:
+      - selenium-network
+networks:
+  selenium-network:
+    name: grid
+    driver: bridge
