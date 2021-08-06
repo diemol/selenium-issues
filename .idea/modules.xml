@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/docker-selenium/issue-1324/issue-1324.iml" filepath="$PROJECT_DIR$/docker-selenium/issue-1324/issue-1324.iml" />
+      <module fileurl="file://$PROJECT_DIR$/docker-selenium/issue-1348/issue-1348.iml" filepath="$PROJECT_DIR$/docker-selenium/issue-1348/issue-1348.iml" />
       <module fileurl="file://$PROJECT_DIR$/selenium/issue-9600/issue-9600.iml" filepath="$PROJECT_DIR$/selenium/issue-9600/issue-9600.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/selenium-issues.iml" filepath="$PROJECT_DIR$/.idea/selenium-issues.iml" />
     </modules>

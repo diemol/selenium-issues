@@ -1,0 +1,21 @@
+version: "3"
+services:
+
+  selenium-hub:
+    image: selenium/hub:3.141.59-20210804
+    ports:
+      - "4444:4444"
+    expose:
+      - 4444
+
+  chrome:
+    image: selenium/node-chrome-debug:3.141.59-20210804
+    depends_on:
+      - selenium-hub
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
