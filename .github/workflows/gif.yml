@@ -11,7 +11,7 @@ jobs:
         uses: PabloLec/website-to-gif@1.0.4
         with:
           url: "https://www.selenium.dev/"
-          gif_name: "selenium_site.gif"
+          gif_name: "selenium_site"
       - name: Commit GIF to GH repo
         run: |
           git config --global user.name "Diego Molina"
