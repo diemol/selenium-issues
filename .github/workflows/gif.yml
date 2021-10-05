@@ -10,7 +10,7 @@ jobs:
       - name: Website to GIF
         uses: PabloLec/website-to-gif@1.0.4
         with:
-          url: "https://www.selenium.dev/"
+          url: "https://www.selenium.dev/blog/2021/selenium-4-rc-2/"
           gif_name: "selenium_site"
       - name: Commit GIF to GH repo
         run: |
