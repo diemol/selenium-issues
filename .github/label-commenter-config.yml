@@ -8,9 +8,13 @@ labels:
     labeled:
       issue:
         body: |
+          @{{ issue.user.login }}, thank you for creating this issue. We will troubleshoot it as soon as we can.
+          
+          ---
           <details>
             <summary>Info for maintainers</summary>
             <div>
+              <br>
               <p>
                 Triage this issue by using labels.
               </p>
