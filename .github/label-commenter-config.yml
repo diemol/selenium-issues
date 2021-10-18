@@ -7,6 +7,17 @@ comment:
     [peaceiris/actions-label-commenter]: https://github.com/peaceiris/actions-label-commenter"
 
 labels:
+  - name: needs-triaging
+    labeled:
+      issue:
+        body: |
+          <details>
+            <summary>Epcot Center</summary>
+            <p>
+              Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, 
+              award-winning fireworks and seasonal special events.
+            </p>
+          </details> 
   - name: invalid
     labeled:
       issue:
