@@ -21,7 +21,11 @@ labels:
   - name: invalid
     labeled:
       issue:
-        body: Please follow the issue templates.
+        body: |
+          💬 Please ask questions at:
+          * 📫 The [Selenium user group](https://groups.google.com/forum/#!forum/selenium-users)
+          * 📮 [StackOverflow](https://stackoverflow.com/questions/tagged/selenium)
+          * 🗣 Our [IRC/Slack/Matrix channels](https://www.selenium.dev/support/) where the community can help you as well
         action: close
       pr:
         body: Thank you @{{ pull_request.user.login }} for suggesting this. Please follow the pull request templates.
