@@ -10,5 +10,5 @@ driver = webdriver.Remote(
     options=firefox_options
 )
 driver.get("https://www.google.com")
-time.sleep(5)
+time.sleep(30)
 driver.quit()
