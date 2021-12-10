@@ -16,7 +16,7 @@ import java.util.Optional;
 
 public class Issue9803 {
 
-  public static void main (String[] args) throws MalformedURLException, InterruptedException {
+  public static void main (String[] args) throws MalformedURLException {
     WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), new ChromeOptions());
     driver = new Augmenter().augment(driver);
     driver.get("https://www.duckduckgo.com");
