@@ -1,0 +1,51 @@
+version: "3"
+services:
+    chrome1:
+        image: selenium/node-chrome:4.1.0-20211215
+        privileged: true
+        hostname: chrome1
+        shm_size: 2G
+        environment:
+            - VNC_NO_PASSWORD=1
+            - VNC_PORT=5901
+            - NO_VNC_PORT=7901
+            - VNC_VIEW_ONLY=1
+            - SE_NODE_GRID_URL=http://192.168.1.18:4444
+            - SCREEN_WIDTH=1550
+            - SCREEN_HEIGHT=880
+            - SCREEN_DPI=72
+            - SCREEN_DEPTH=16
+            - START_NO_VNC=true
+            - DISPLAY=:91
+            - DISPLAY_NUM=91
+            - SE_OPTS=--registration-secret xt3jrtsQW3KFK9em4bCy --host 192.168.1.18 --port 5501
+            - SE_EVENT_BUS_HOST=selenium-hub
+            - SE_EVENT_BUS_PUBLISH_PORT=4442
+            - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+            - SE_SESSION_REQUEST_TIMEOUT=500
+            - SE_SESSION_RETRY_INTERVAL=2
+            - CONTAINER_HOST=tcp://192.168.1.18:23750
+            - TZ=US/Eastern
+            - DOCKER_HOST=tcp://192.168.1.18:23750
+        ports:
+            - "5901:5901"
+            - "7901:7901"
+            - "5501:5501"
+
+    selenium-hub:
+        image: selenium/hub:4.1.0-20211215
+        privileged: true
+        hostname: selenium-hub
+        labels:
+            - org.broadinstitute.grid.service=hub
+        environment:
+            - SE_SESSION_REQUEST_TIMEOUT=500
+            - SE_SESSION_RETRY_INTERVAL=2
+            - SE_OPTS=--registration-secret xt3jrtsQW3KFK9em4bCy
+            - VNC_VIEW_ONLY=1
+            - CONTAINER_HOST=tcp://192.168.1.18:23750
+            - DOCKER_HOST=tcp://192.168.1.18:23750
+            - TZ=US/Eastern
+        ports:
+            - 4444:4444
+
