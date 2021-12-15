@@ -1,0 +1,38 @@
+version: "3"
+services:
+  chrome6:
+    image: selenium/node-chrome:4.0.0-20211025
+    shm_size: 2gb
+    network_mode: host
+    environment:
+      - SE_EVENT_BUS_HOST=192.168.1.18
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_GRID_URL=http://192.168.1.18:4454
+      - SE_NODE_PORT=5556
+      - SE_NODE_HOST=192.168.1.18
+      - VNC_PORT=5906
+      - DISPLAY=:99.0
+      - DISPLAY_NUM=99
+      - START_NO_VNC=false
+  chrome7:
+    image: selenium/node-chrome:4.0.0-20211025
+    shm_size: 2gb
+    network_mode: host
+    environment:
+      - SE_EVENT_BUS_HOST=192.168.1.18
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_GRID_URL=http://192.168.1.18:4454
+      - SE_NODE_PORT=5557
+      - SE_NODE_HOST=192.168.1.18
+      - VNC_PORT=5907
+      - DISPLAY=:98.0
+      - DISPLAY_NUM=98
+      - START_NO_VNC=false
+  selenium-hub-2:
+    image: selenium/hub:4.0.0-20211025
+    container_name: selenium-hub-2
+    network_mode: host
+    environment:
+       - SE_OPTS=--host 192.168.1.18 --port 4454
