@@ -1,0 +1,18 @@
+[events]
+publish = "tcp://192.168.1.100:4442"
+subscribe = "tcp://192.168.1.100:4443"
+
+[server]
+host = "192.168.1.100"
+port = 5555
+
+[node]
+session-timeout = "300"
+override-max-sessions = true
+detect-drivers = false
+max-sessions = 5
+
+[[node.driver-configuration]]
+display-name = "firefox"
+stereotype = '{"browserName": "firefox", "platformName": "macOS", "browserVersion":"96", "networkname:applicationName":"node_1", "nodename:applicationName":"app_1" }'
+max-sessions = 5
