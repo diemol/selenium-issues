@@ -1,6 +1,7 @@
 name: Generate demo GIF
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
   generate-gif:
