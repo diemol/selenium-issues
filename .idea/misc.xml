@@ -24,6 +24,7 @@
         <option value="$PROJECT_DIR$/selenium/issue-10175/pom.xml" />
         <option value="$PROJECT_DIR$/docker-selenium/issue-1500/pom.xml" />
         <option value="$PROJECT_DIR$/selenium/issue-10349/pom.xml" />
+        <option value="$PROJECT_DIR$/selenium/issue-10231/pom.xml" />
       </list>
     </option>
   </component>
