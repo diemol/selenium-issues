@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="issue-9671" />
+        <module name="issue-7790" />
+        <module name="issue-10231" />
+        <module name="issue-10175" />
+        <module name="issue-9441" />
+        <module name="issue-1500" />
+        <module name="issue-1324" />
+        <module name="issue-1348" />
+        <module name="issue-greg-c" />
+        <module name="issue-1416" />
+        <module name="issue-10116" />
+        <module name="issue-9976" />
+        <module name="issue-10125" />
+        <module name="issue-9600" />
+        <module name="issue-1341" />
+        <module name="issue-9528" />
+        <module name="issue-9803" />
+        <module name="issue-10349" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
