@@ -23,6 +23,7 @@
         <module name="issue-1341" />
         <module name="issue-9528" />
         <module name="issue-9803" />
+        <module name="issue-10504" />
         <module name="issue-10349" />
       </profile>
     </annotationProcessing>
