@@ -12,12 +12,12 @@ import java.net.URL;
 public class Issue10231 {
 
   public static void main (String[] args) throws MalformedURLException {
-    // This will work with Selenium 4.1.3 and above
+    // This will work with Selenium 4.1.4 and above
     ChromeOptions browserOptions = new ChromeOptions();
     // Proxy started with https://github.com/diemol/squid-with-basic-auth
-    Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("locahost", 3128));
+    Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 3128));
     ClientConfig config = ClientConfig.defaultConfig()
-      .baseUrl(new URL("http://192.168.1.7:4444"))
+      .baseUrl(new URL("http://192.168.1.11:4444"))
       .authenticateAs(new UsernameAndPassword("docker-proxy", "selenium"))
       .proxy(proxy);
     WebDriver driver = RemoteWebDriver.builder()
