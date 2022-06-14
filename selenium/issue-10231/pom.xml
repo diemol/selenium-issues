@@ -17,7 +17,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.1.4-issue-10531</version>
+      <version>4.1.4</version>
     </dependency>
   </dependencies>
 
