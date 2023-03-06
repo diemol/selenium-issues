@@ -7,13 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="issue-9671" />
-        <module name="issue-9792" />
         <module name="issue-7790" />
         <module name="issue-10497" />
         <module name="issue-10231" />
         <module name="issue-10495" />
         <module name="issue-10374" />
         <module name="issue-10175" />
+        <module name="issue-11264" />
         <module name="issue-1416" />
         <module name="issue-9976" />
         <module name="issue-10600" />
@@ -34,11 +34,16 @@
         <module name="issue-9600" />
         <module name="issue-10774" />
         <module name="issue-11203" />
+        <module name="pr-11277" />
         <module name="issue-1341" />
         <module name="issue-9528" />
         <module name="issue-9803" />
         <module name="issue-10711" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="issue-9792" target="11" />
+      <module name="release-4.6.0" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
