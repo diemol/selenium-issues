@@ -1,0 +1,53 @@
+title = "Configurar Selenium 4 en modo Node"
+
+[server]
+    registration-secret = "clave"
+    host = "node1IPaddress"
+    port = 5555
+    allow-cors = true
+    bind-host = true
+
+
+[node]
+    detect-drivers = false
+    drain-after-session-count = 0
+
+    [[node.driver-configuration]]
+        display-name = "Internet Explorer"
+        webdriver-executable = "path\\IEDriverServer.exe"
+        max-sessions = 1
+        stereotype = "{\"browserName\": \"internet explorer\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\", \"se:ieOptions\": {\"ie.edgechromium\":\"true\", \"ie.edgepath\": \"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\"}}"
+
+    [[node.driver-configuration]]
+        display-name = "Firefox"
+        webdriver-executable = "path\\geckodriver.exe"
+        max-sessions = 5
+        stereotype = "{\"browserName\": \"firefox\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\"}"
+
+    [[node.driver-configuration]]
+        display-name = "Chrome"
+        webdriver-executable = "path\\chromedriver.exe"
+        max-sessions = 5
+        stereotype = "{\"browserName\": \"chrome\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\"}"
+
+    [[node.driver-configuration]]
+        display-name = "Edge"
+        webdriver-executable = "path\\msedgedriver.exe"
+        max-sessions = 5
+        stereotype = "{\"browserName\": \"MicrosoftEdge\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\"}"
+
+
+    implementation = "org.openqa.selenium.grid.node.local.LocalNodeFactory"
+    hub = "http://hubIPaddress:4444"
+    grid-url = "http://hubIPaddress:4444"
+    enable-cdp = true
+    heartbeat-period = 60
+
+    register-cycle = 10
+    register-period = 120
+    session-timeout = 300
+
+[events]
+    bind = false
+    publish = "tcp://hubIPaddress:5558"
+    subscribe = "tcp://hubIPaddress:5559"

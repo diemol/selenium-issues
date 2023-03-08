@@ -41,6 +41,7 @@
         <option value="$PROJECT_DIR$/pr-11277/pom.xml" />
         <option value="$PROJECT_DIR$/selenium/pr-11277/pom.xml" />
         <option value="$PROJECT_DIR$/issue-11264/pom.xml" />
+        <option value="$PROJECT_DIR$/issue-11625/pom.xml" />
       </list>
     </option>
   </component>
