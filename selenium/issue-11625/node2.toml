@@ -2,34 +2,23 @@ title = "Configurar Selenium 4 en modo Node"
 
 [server]
     registration-secret = "clave"
-    host = "node2IPaddress"
-    port = 5555
-    allow-cors = true
-    bind-host = true
-    max-threads = 20
+    host = "192.168.1.42"
+    port = 5556
 
 
 [node]
     detect-drivers = false
-    drain-after-session-count = 0
 
     [[node.driver-configuration]]
         display-name = "Internet Explorer"
-        webdriver-executable = "path\\IEDriverServer.exe"
+        webdriver-executable = "C:\\tools\\WebDriverServers\\IEDriverServer.exe"
         max-sessions = 1
-    stereotype = '{"browserName": "internet explorer", "c:custom-cap":  true, "platformName": "WIN10", "se:ieOptions": {"ie.edgechromium":"true", "ie.edgepath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"}}'
+        stereotype = '{"browserName": "internet explorer", "c:custom-cap":  true, "platformName": "WIN10", "se:ieOptions": {"ie.edgechromium":"true", "ie.edgepath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"}}'
 
-    implementation = "org.openqa.selenium.grid.node.local.LocalNodeFactory"
-    hub = "http://hubIPaddress:4444"
-    grid-url = "http://hubIPaddress:4444"
-    enable-cdp = true
-    heartbeat-period = 60
-
-    register-cycle = 10
-    register-period = 120
-    session-timeout = 300
+    hub = "http://192.168.1.39:4444"
+    grid-url = "http://192.168.1.39:4444"
 
 [events]
     bind = false
-    publish = "tcp://hubIPaddress:5558"
-    subscribe = "tcp://hubIPaddress:5559"
+    publish = "tcp://192.168.1.39:5558"
+    subscribe = "tcp://192.168.1.39:5559"
