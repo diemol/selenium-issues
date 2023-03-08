@@ -17,7 +17,7 @@ title = "Configurar Selenium 4 en modo Node"
         display-name = "Internet Explorer"
         webdriver-executable = "path\\IEDriverServer.exe"
         max-sessions = 1
-        stereotype = "{\"browserName\": \"internet explorer\", \"c:custom-cap\":  true, \"platformName\": \"WIN10\", \"se:ieOptions\": {\"ie.edgechromium\":\"true\", \"ie.edgepath\": \"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\"}}"
+    stereotype = '{"browserName": "internet explorer", "c:custom-cap":  true, "platformName": "WIN10", "se:ieOptions": {"ie.edgechromium":"true", "ie.edgepath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"}}'
 
     implementation = "org.openqa.selenium.grid.node.local.LocalNodeFactory"
     hub = "http://hubIPaddress:4444"

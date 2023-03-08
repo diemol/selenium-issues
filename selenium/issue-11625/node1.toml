@@ -16,26 +16,25 @@ title = "Configurar Selenium 4 en modo Node"
         display-name = "Internet Explorer"
         webdriver-executable = "path\\IEDriverServer.exe"
         max-sessions = 1
-        stereotype = "{\"browserName\": \"internet explorer\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\", \"se:ieOptions\": {\"ie.edgechromium\":\"true\", \"ie.edgepath\": \"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\"}}"
+        stereotype = '{"browserName": "internet explorer", "c:custom-cap":  false, "platformName": "WIN10", "se:ieOptions": {"ie.edgechromium":"true", "ie.edgepath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"}}'
 
     [[node.driver-configuration]]
         display-name = "Firefox"
         webdriver-executable = "path\\geckodriver.exe"
         max-sessions = 5
-        stereotype = "{\"browserName\": \"firefox\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\"}"
+        stereotype = '{"browserName": "firefox", "c:custom-cap":  false, "platformName": "WIN10"}'
 
     [[node.driver-configuration]]
         display-name = "Chrome"
         webdriver-executable = "path\\chromedriver.exe"
         max-sessions = 5
-        stereotype = "{\"browserName\": \"chrome\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\"}"
+        stereotype = '{"browserName": "chrome", "c:custom-cap":  false, "platformName": "WIN10"}"
 
     [[node.driver-configuration]]
         display-name = "Edge"
         webdriver-executable = "path\\msedgedriver.exe"
         max-sessions = 5
-        stereotype = "{\"browserName\": \"MicrosoftEdge\", \"c:custom-cap\":  false, \"platformName\": \"WIN10\"}"
-
+        stereotype = '{"browserName": "MicrosoftEdge", "c:custom-cap":  false, "platformName": "WIN10"}"
 
     implementation = "org.openqa.selenium.grid.node.local.LocalNodeFactory"
     hub = "http://hubIPaddress:4444"

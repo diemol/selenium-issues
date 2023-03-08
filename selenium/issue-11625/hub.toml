@@ -8,29 +8,16 @@ allow-cors = true
 bind-host = false
 
 [sessionqueue]
-host = "http://localhost:1234"
-hostname = "localhost"
-port = 1234
 #18h
 session-request-timeout = 64800
 session-retry-interval = 5
 
 [distributor]
-host = "http://localhost:5553"
-hostname = "localhost"
-port = 5553
-healthcheck-interval = 120
 reject-unsupported-caps = true
 
-
 [events]
-implementation = "org.openqa.selenium.events.zeromq.ZeroMqEventBus"
-#publish = "tcp://*:4442"
-#subscribe = "tcp://*:4443"
 publish = "tcp://*:5558"
 subscribe = "tcp://*:5559"
-bind = true
-
 
 [network]
 relax-checks = false
