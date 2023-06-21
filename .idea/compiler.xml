@@ -13,7 +13,6 @@
         <module name="issue-10495" />
         <module name="issue-10374" />
         <module name="issue-10175" />
-        <module name="issue-11264" />
         <module name="issue-1416" />
         <module name="issue-9976" />
         <module name="issue-10600" />
@@ -22,12 +21,12 @@
         <module name="issue-10349" />
         <module name="issue-10448" />
         <module name="issue-10661" />
+        <module name="issue-11750" />
         <module name="issue-9441" />
         <module name="issue-10681" />
         <module name="issue-1500" />
         <module name="issue-1324" />
         <module name="issue-1348" />
-        <module name="issue-greg-c" />
         <module name="issue-10859" />
         <module name="issue-10116" />
         <module name="issue-9600" />
@@ -37,12 +36,13 @@
         <module name="issue-1341" />
         <module name="issue-9528" />
         <module name="issue-9803" />
-        <module name="issue-11625" />
         <module name="issue-10711" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="issue-11264" target="11" />
       <module name="issue-9792" target="11" />
+      <module name="issue-greg-c" target="1.8" />
       <module name="release-4.6.0" target="11" />
     </bytecodeTargetLevel>
   </component>

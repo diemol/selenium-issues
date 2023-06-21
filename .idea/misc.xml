@@ -42,7 +42,13 @@
         <option value="$PROJECT_DIR$/selenium/pr-11277/pom.xml" />
         <option value="$PROJECT_DIR$/issue-11264/pom.xml" />
         <option value="$PROJECT_DIR$/issue-11625/pom.xml" />
+        <option value="$PROJECT_DIR$/selenium/issue-11750/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/selenium/issue-greg-c/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="PWA">
