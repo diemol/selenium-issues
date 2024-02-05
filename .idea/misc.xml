@@ -50,6 +50,7 @@
         <option value="$PROJECT_DIR$/selenium/issue-greg-c/pom.xml" />
       </set>
     </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="PWA">
     <option name="wasEnabledAtLeastOnce" value="true" />
