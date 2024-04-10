@@ -44,6 +44,7 @@
         <option value="$PROJECT_DIR$/issue-11625/pom.xml" />
         <option value="$PROJECT_DIR$/selenium/issue-11750/pom.xml" />
         <option value="$PROJECT_DIR$/selenium/issue-13524/pom.xml" />
+        <option value="$PROJECT_DIR$/selenium/issue-13791/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -51,7 +52,6 @@
         <option value="$PROJECT_DIR$/selenium/issue-greg-c/pom.xml" />
       </set>
     </option>
-    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="PWA">
     <option name="wasEnabledAtLeastOnce" value="true" />
