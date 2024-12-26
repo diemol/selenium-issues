@@ -45,6 +45,7 @@
         <option value="$PROJECT_DIR$/selenium/issue-11750/pom.xml" />
         <option value="$PROJECT_DIR$/selenium/issue-13524/pom.xml" />
         <option value="$PROJECT_DIR$/selenium/issue-13791/pom.xml" />
+        <option value="$PROJECT_DIR$/selenium/issue-14908/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -56,5 +57,5 @@
   <component name="PWA">
     <option name="wasEnabledAtLeastOnce" value="true" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" project-jdk-name="temurin-11" project-jdk-type="JavaSDK" />
 </project>
