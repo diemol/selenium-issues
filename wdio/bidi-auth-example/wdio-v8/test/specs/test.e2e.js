@@ -11,6 +11,8 @@ describe('Set Headers Using CDP with Sauce Labs', () => {
             },
         });
 
+        await browser.url('https://the-internet.herokuapp.com/');
+
         // Listen for request events
         browser.on('Network.requestWillBeSent', (params) => {
             console.log('Request URL:', params.request.url);
@@ -19,5 +21,8 @@ describe('Set Headers Using CDP with Sauce Labs', () => {
 
         // Load basic auth url
         await browser.url('https://the-internet.herokuapp.com/basic_auth');
+
+        const bodyText = await $('body').getText();
+        expect(bodyText).toContain('Congratulations! You must have the proper credentials.');
     });
 });
