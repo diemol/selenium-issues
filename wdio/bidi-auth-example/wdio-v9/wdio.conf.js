@@ -116,7 +116,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    services: ['sauce'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -145,7 +145,7 @@ export const config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 160000
     },
 
     //
@@ -200,8 +200,35 @@ export const config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: async function (capabilities, specs, browser) {
+        await browser.sessionSubscribe({
+            events: [
+                'network.authRequired'
+            ]
+        });
+
+        await browser.networkAddIntercept({
+            phases: ['authRequired']
+            // optionally: urlPatterns: [{ type: 'string', pattern: 'https://sample.url.com/*' }]
+        });
+
+        browser.on('network.authRequired', async (evt) => {
+            console.log(`[authRequired] ${evt.request.url}`);
+            try {
+                await browser.networkContinueWithAuth({
+                    request: evt.request.request,
+                    action: 'provideCredentials',
+                    credentials: {
+                        type: 'password',
+                        username: 'admin',
+                        password: 'admin'
+                    }
+                });
+            } catch (err) {
+                console.warn('continueWithAuth failed:', err.message);
+            }
+        });
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
